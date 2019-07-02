@@ -5,7 +5,7 @@ dotenv.config();
 const geoCode = (address, callback) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     address
-  )}.json?access_token=${process.env.TOKEN}`;
+  )}.json?access_token=pk.eyJ1IjoiamFtZXNqdXR0IiwiYSI6ImNqeGtrY2tiOTFhbzQzeG10a2o2OXVuNHMifQ.LNJwmt-sIDbbf3roxgK95w`;
   request({ url, json: true }, (err, { body }) => {
     if (err) {
       callback("Unable to connect to location services", undefined);
