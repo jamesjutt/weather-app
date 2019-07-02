@@ -3,9 +3,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const forecast = (lat, long, callback) => {
-  const url = `https://api.darksky.net/forecast/038f4c6fb545c8fb41ecf47cfdf2debc/${encodeURIComponent(
-    lat
-  )},${encodeURIComponent(long)}`;
+  const url = `https://api.darksky.net/forecast/${
+    process.env.SECRET_KEY
+  }/${encodeURIComponent(lat)},${encodeURIComponent(long)}`;
 
   request({ url, json: true }, (err, { body }) => {
     if (err) {
