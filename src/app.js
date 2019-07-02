@@ -102,3 +102,5 @@ app.get("*", (req, res) => {
 app.listen(port, () => {
   console.log("Server is up on port 3000.");
 });
+
+// Out put all possible calculations
