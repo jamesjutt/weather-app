@@ -24,7 +24,6 @@ weatherForm.addEventListener("submit", e => {
       if (data.error) {
         messageOne.textContent = data.error;
       } else {
-        console.log(data);
         messageOne.textContent = data.location;
         for (const key in data.forecast) {
           messageTwo.appendChild(createP(`${key}: ${data.forecast[key]}`));
